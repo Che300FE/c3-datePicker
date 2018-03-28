@@ -1,0 +1,70 @@
+.data-picker {
+  .title-bar {
+    position: relative;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    font-size: .51rem;
+    background-color: #ffffff;
+    border-bottom: 1px solid #f0f0f0;
+    
+    .go-back__arrow {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 45px;
+      width: 50px;
+      .back-img {
+        width: .24rem;
+        height: .48rem;
+      }
+    }
+    .title-name {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .date-list__wrapper{
+    position: absolute;
+    left: 0;
+    top: 45px;
+    bottom: 0;
+    width: 100%;
+    overflow-y: scroll;
+
+    .date__year-item{
+      .date__year-value{
+        display: block;
+        height: 1.28rem /* 48/37.5 */;
+        margin-left: .4rem /* 15/37.5 */;
+        line-height: 1.28rem;
+        font-size: .43rem /* 16/37.5 */;
+        border-bottom: 1px solid #f0f0f0;
+      }
+
+      .date__month-list{
+        display: flex;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+        background-color: #ebebeb;
+        padding: .4rem .4rem 0 /* 15/37.5 */;
+
+        .date__month-item{
+          box-sizing: border-box;
+          width: 1.85rem;
+          height: .8rem;
+          margin: 0 .36rem .4rem 0;
+          border: 1px solid #f0f0f0;
+          background-color: #ffffff;
+          border-radius: 4px;
+          text-align: center;
+          line-height: .8rem;
+          font-size: .32rem;
+          color: #666666;
+        }
+      }
+    }
+  }
+}
