@@ -1,8 +1,8 @@
 <template>
-  <div class="data-picker">
+  <div class="data-picker" v-if="visiable">
     <!-- 顶部的bar条开始 -->
     <div class="title-bar">
-      <div class="go-back__arrow">
+      <div class="go-back__arrow" @click.stop="goBack">
         <img class="back-img" src="https://ssl-assets.che300.com/feimg/bapp/substitution/left-arrow.png">
       </div>
       <h2 class="title-name">选择日期</h2>
@@ -36,6 +36,9 @@
 </template>
 
 <script>
+
+import '../sass/datePicker.scss';
+
 let oDate = new Date();
 let curYear = oDate.getFullYear();
 let curMonth = oDate.getMonth() + 1;
@@ -43,6 +46,10 @@ let curMonth = oDate.getMonth() + 1;
 export default {
   name: "c3DatePicker",
   props: {
+    visiable: {
+      type: Boolean,
+      default: false
+    },
     maxYear: {
       type: [String, Number],
       default: curYear

@@ -1,4 +1,10 @@
 .data-picker {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+
   .title-bar {
     position: relative;
     width: 100%;
@@ -33,6 +39,7 @@
     bottom: 0;
     width: 100%;
     overflow-y: scroll;
+    background-color: #ffffff;
 
     .date__year-item{
       .date__year-value{
