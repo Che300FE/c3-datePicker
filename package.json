@@ -1,10 +1,9 @@
 {
-  "name": "c3-data-picker",
+  "name": "c3-date-picker",
   "description": "车300时间选择组件",
-  "version": "1.0.0",
-  "author": "carver <1084024036@qq.com>",
+  "version": "0.0.2",
+  "author": "killerkill <1084024036@qq.com>",
   "license": "MIT",
-  "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
