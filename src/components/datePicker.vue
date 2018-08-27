@@ -84,33 +84,39 @@ export default {
       allDate: []
     };
   },
-  created() {
-    // 渲染前对数据做统一的限制处理
-    this.maxY = this.limitYear(this.maxYear);
-    this.minY = this.limitYear(this.minYear);
-    this.maxM = this.limitMonth(this.maxY, this.maxMonth);
-    this.minM = this.limitMonth(this.minY, this.minMonth);
-
-    if (this.maxY < this.minY) {
-      // 最小年不能大于最大年
-      this.minY = this.maxY;
-
-      if (this.maxM < this.minY) {
-        // 当最小年最大年是同一年的时候
-        // 最小月份不能大于最大月份
-        this.minM = this.maxM;
-      }
+  watch: {
+    visiable (val) {
+      val && this.initDate();
     }
-
-    // 生成区间内所有年月的数据
-    this.allDate = this.createAllDate(
-      this.maxY,
-      this.maxM,
-      this.minY,
-      this.minM
-    );
   },
   methods: {
+    // 渲染前对数据做统一的限制处理
+    initDate () {
+      this.maxY = this.limitYear(this.maxYear);
+      this.minY = this.limitYear(this.minYear);
+      this.maxM = this.limitMonth(this.maxY, this.maxMonth);
+      this.minM = this.limitMonth(this.minY, this.minMonth);
+
+      if (this.maxY < this.minY) {
+        // 最小年不能大于最大年
+        this.minY = this.maxY;
+
+        if (this.maxM < this.minY) {
+          // 当最小年最大年是同一年的时候
+          // 最小月份不能大于最大月份
+          this.minM = this.maxM;
+        }
+      }
+
+      // 生成区间内所有年月的数据
+      this.allDate = this.createAllDate(
+        this.maxY,
+        this.maxM,
+        this.minY,
+        this.minM
+      );
+    },
+
     // 对传入的年份做规则处理
     limitYear(year) {
       year = Number(year);

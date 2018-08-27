@@ -1,10 +1,10 @@
 <template>
   <div id="app">
     <date-picker
-      min-year="2012"
-      min-month="4"
-      max-year="2018"
-      max-month="01"
+      :min-year="minYear"
+      :min-month="minMonth"
+      :max-year="maxYear"
+      :max-month="maxMonth"
       :select-month="selectMonth"></date-picker>
   </div>
 </template>
@@ -20,6 +20,10 @@ export default {
   },
   data () {
     return {
+      maxYear: 2018,
+      minYear: 2016,
+      maxMonth: 4,
+      minMonth: 1,
     }
   },
   methods: {

@@ -1,7 +1,7 @@
 {
   "name": "c3-date-picker",
   "description": "车300时间选择组件",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "author": "killerkill <1084024036@qq.com>",
   "license": "MIT",
   "scripts": {
