@@ -15,7 +15,7 @@
                 @click.stop="toggleMonth(year)"
                 :key="index">
                 <span class="date__year-value">
-                    {{year.year}}
+                    {{year.year}}年
                 </span>
                 <ul class="date__month-list"
                     v-show="year.toggle">
